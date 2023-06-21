@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.banner {
+  height: 100%;
+  background-image: url('./banner.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__perfume {
+    // position: absolute;
+    height: 500px;
+    animation: mover 1s infinite alternate;
+
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-top: 50px;
+    font-size: 32px;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
+}
+
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
